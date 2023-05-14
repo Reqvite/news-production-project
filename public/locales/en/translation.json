@@ -1,5 +1,7 @@
 {
   "Main": "Main",
   "Language": "Українська",
-  "Not Found": "Not found"
+  "Not Found": "Not found",
+  "Error boundary message": "An unexpected error occurred",
+  "Reload page": "Reload page"
 }

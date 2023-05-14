@@ -1,5 +1,7 @@
 {
   "Main": "Головна",
   "Language": "English",
-  "Not Found": "Сторінка не знайдена"
+  "Not Found": "Сторінка не знайдена",
+  "Error boundary message": "Сталася непередбачена помилка",
+  "Reload page": "Перезавантажити сторінку"
 }
