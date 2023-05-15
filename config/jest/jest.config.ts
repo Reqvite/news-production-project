@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+const path = require('path');
+
 module.exports = {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -28,12 +30,18 @@ module.exports = {
         'node',
     ],
     moduleDirectories: [
+        'src',
         'node_modules',
     ],
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     rootDir: '../../',
+    moduleNameMapper: {
+        '\\.(css|scss)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'JestEmptyComponent.tsx'),
+    },
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
