@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
-import { Navbar } from './Navbar';
+import { Loader } from './Loader';
 
-const meta: Meta<typeof Navbar> = {
+const meta: Meta<typeof Loader> = {
     decorators: [withRouter],
-    title: 'widget/Navbar',
-    component: Navbar,
+    title: 'shared/Loader',
+    component: Loader,
 };
 
 export default meta;
-type Story = StoryObj<typeof Navbar>;
+type Story = StoryObj<typeof Loader>;
 
-export const NavbarVariant: Story = {
+export const PRIMARY : Story = {
     args: {
 
     },
