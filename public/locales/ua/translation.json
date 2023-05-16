@@ -1,8 +1,9 @@
 {
   "Main": "Головна",
-    "About": "Про сторінку",
+  "About": "Про сторінку",
   "Language": "English",
   "Not Found": "Сторінка не знайдена",
   "Error boundary message": "Сталася непередбачена помилка",
-  "Reload page": "Перезавантажити сторінку"
+  "Reload page": "Перезавантажити сторінку",
+  "ShortLanguage": "Eng"
 }

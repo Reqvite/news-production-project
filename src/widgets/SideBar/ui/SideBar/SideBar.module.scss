@@ -1,13 +1,35 @@
 .Sidebar {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
+  padding: 10px;
   background: var(--inverted-bg-color);
   transition: width 0.3s;
 }
 
-.collapsed {
-  width: var(--sidebar-width-collapsed);
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+}
+
+.collapsedBtn {
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
 }
 
 .switchers {
@@ -17,4 +39,19 @@
   justify-content: center;
   width: 100%;
   gap: 20px;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .switchers {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .link {
+    width: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
 }
