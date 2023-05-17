@@ -58,7 +58,7 @@ jobs:
         run: npm run build:prod
 
   pipeline:
-    needs: [lint, test, build-and-screen-test]
+    needs: [lint, test, screen-test, build]
     runs-on: windows-2019
     steps:
       - name: Check results
