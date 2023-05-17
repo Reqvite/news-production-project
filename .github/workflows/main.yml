@@ -1,5 +1,3 @@
-name: CI
-
 on:
   push:
     branches: [main]
@@ -7,70 +5,53 @@ on:
     branches: [main]
 
 jobs:
-  linting:
+  pipeline:
     runs-on: windows-2019
+
     strategy:
       matrix:
         node-version: [18.x]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Set up Node.js ${{ matrix.node-version }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install modules
+      - name: install modules
         run: npm install --force
 
-      - name: Lint TypeScript
-        run: npm run lint:ts
+      - name: Run linting and testing
+        needs: [linting, testing]
 
-      - name: Lint CSS
-        run: npm run lint:scss
-
-     - name: Run unit tests
-        run: npm run test:unit
-  testing:
-    runs-on: windows-2019
-    strategy:
-      matrix:
-        node-version: [18.x]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install modules
-        run: npm install --force
+      - name: Build production project
+        run: npm run build:prod
+        if: always()
 
       - name: Build Storybook
         run: npm run storybook:build
 
-      - name: Run UI tests
+      - name: Run screenshot testing
         run: npm run test:ui:ci
-  building:
+
+  linting:
     runs-on: windows-2019
-    strategy:
-      matrix:
-        node-version: [18.x]
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Linting TypeScript
+        run: npm run lint:ts
+        if: always()
 
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+      - name: Linting CSS
+        run: npm run lint:scss
+        if: always()
 
-      - name: Install modules
-        run: npm install --force
+  testing:
+    runs-on: windows-2019
 
-      - name: Build production project
-        run: npm run build:prod
-
+    steps:
+      - name: Unit Testing
+        run: npm run test:unit
+        if: always()
