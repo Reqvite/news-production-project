@@ -1,9 +1,9 @@
-name: linting, testing, building
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+
 jobs:
   pipeline:
     runs-on: windows-2019
@@ -13,25 +13,27 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
+
+      - name: Install modules
         run: npm install --force
-      - name: build production project
-        run: npm run build:prod
-        if: always()
-      - name: linting typescript
-        run: npm run lint:ts
-        if: always()
-      - name: linting css
-        run: npm run lint:scss
-        if: always()
-      - name: unit testing
+
+      - name: Run linting
+        id: linting
+        run: npm run lint:ts && npm run lint:scss
+
+      - name: Run testing
+        id: testing
         run: npm run test:unit
-        if: always()
-      - name: build storybook
-        run: npm run storybook:build
-      - name: screenshot testing
-        run: npm run test:ui:ci
+
+      - name: Run building
+        id: building
+        run: |
+          npm run build:prod
+          npm run storybook:build
+          npm run test:ui:ci
+        needs: [linting, testing]
