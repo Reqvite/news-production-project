@@ -15,12 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: install modules
+      - name: Install modules
         run: npm install --force
 
       - name: Run linting and testing
@@ -42,11 +42,9 @@ jobs:
     steps:
       - name: Linting TypeScript
         run: npm run lint:ts
-        if: always()
 
       - name: Linting CSS
         run: npm run lint:scss
-        if: always()
 
   testing:
     runs-on: windows-2019
@@ -54,4 +52,3 @@ jobs:
     steps:
       - name: Unit Testing
         run: npm run test:unit
-        if: always()
