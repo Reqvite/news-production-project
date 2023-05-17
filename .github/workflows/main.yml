@@ -5,7 +5,13 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  lint:
+  pipeline:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,3 +36,4 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci
+
