@@ -1,39 +1,57 @@
 name: linting, testing, building
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+
 jobs:
-  pipeline:
-    runs-on: windows-2019
-    strategy:
-      matrix:
-        node-version: [18.x]
-  steps:
-    lint:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: install modules
+
+      - name: Install modules
         run: npm install --force
-      - name: linting typescript
+
+      - name: Linting TypeScript
         run: npm run lint:ts
-      - name: linting css
+
+      - name: Linting CSS
         run: npm run lint:scss
+
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: unit testing
+
+      - name: Install modules
+        run: npm install --force
+
+      - name: Unit Testing
         run: npm run test:unit
-    build and screen-test:
+
+  build-and-screen-test:
     runs-on: ubuntu-latest
-    - uses: actions/checkout@v2
-          - name: build production project
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install modules
+        run: npm install --force
+
+      - name: Build production project
         run: npm run build:prod
-        - name: build storybook
+
+      - name: Build Storybook
         run: npm run storybook:build
-      - name: screenshot testing
+
+      - name: Screenshot Testing
         run: npm run test:ui:ci
 
+  pipeline:
+    needs: [lint, test, build-and-screen-test]
+    runs-on: windows-2019
+    steps:
+      - name: Check results
+        run: echo "Linting, testing, and building jobs are complete."
