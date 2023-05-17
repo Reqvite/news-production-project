@@ -95,6 +95,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "concurrently": "^8.0.1",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
     "i18next-http-backend": "^1.3.2",
@@ -105,13 +106,13 @@
   },
   "loki": {
     "configurations": {
-        "chrome.laptop": {
+      "chrome.laptop": {
         "target": "chrome.docker",
         "width": 1366,
         "height": 768
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "preset": "iPhone 7"
       }
     }
