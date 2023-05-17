@@ -1,3 +1,5 @@
+name: linting, testing, building
+
 on:
   push:
     branches: [main]
@@ -5,35 +7,53 @@ on:
     branches: [main]
 
 jobs:
-  pipeline:
+  linting:
     runs-on: windows-2019
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: Starting Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18.x
 
       - name: Install modules
         run: npm install --force
 
-      - name: Run linting
-        id: linting
-        run: npm run lint:ts && npm run lint:scss
+      - name: Linting TypeScript
+        run: npm run lint:ts
 
-      - name: Run testing
-        id: testing
+      - name: Linting CSS
+        run: npm run lint:scss
+
+              - name: Unit Testing
         run: npm run test:unit
 
-      - name: Run building
-        id: building
-        run: |
-          npm run build:prod
-          npm run storybook:build
-          npm run test:ui:ci
-        needs: [linting, testing]
+  building:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Starting Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+
+      - name: Install modules
+        run: npm install --force
+
+      - name: Build production project
+        run: npm run build:prod
+
+      - name: Build Storybook
+        run: npm run storybook:build
+
+      - name: Screenshot Testing
+        run: npm run test:ui:ci
+
+  pipeline:
+    needs: [linting, testing, building]
+    runs-on: windows-2019
+    steps:
+      - name: Check results
+        run: echo "Linting, testing, and building jobs are complete."
