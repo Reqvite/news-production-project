@@ -8,7 +8,7 @@ export interface componentRenderOptions {
     route?: string;
 }
 
-export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
+export function ComponentRender(component: ReactNode, options: componentRenderOptions = {}) {
     const {
         route = '/',
     } = options;
