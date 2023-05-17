@@ -1,54 +1,37 @@
+name: linting, testing, building
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
 jobs:
   pipeline:
     runs-on: windows-2019
-
     strategy:
       matrix:
         node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Starting Node.js ${{ matrix.node-version }}
+      - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Install modules
+      - name: install modules
         run: npm install --force
-
-      - name: Run linting and testing
-        needs: [linting, testing]
-
-      - name: Build production project
+      - name: build production project
         run: npm run build:prod
         if: always()
-
-      - name: Build Storybook
-        run: npm run storybook:build
-
-      - name: Run screenshot testing
-        run: npm run test:ui:ci
-
-  linting:
-    runs-on: windows-2019
-
-    steps:
-      - name: Linting TypeScript
+      - name: linting typescript
         run: npm run lint:ts
-
-      - name: Linting CSS
+        if: always()
+      - name: linting css
         run: npm run lint:scss
-
-  testing:
-    runs-on: windows-2019
-
-    steps:
-      - name: Unit Testing
+        if: always()
+      - name: unit testing
         run: npm run test:unit
+        if: always()
+      - name: build storybook
+        run: npm run storybook:build
+      - name: screenshot testing
+        run: npm run test:ui:ci
