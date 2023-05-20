@@ -1,5 +1,4 @@
 import { useTheme } from 'app/providers/ThemeProvider';
-import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';
