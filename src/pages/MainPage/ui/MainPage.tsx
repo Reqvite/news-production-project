@@ -16,11 +16,11 @@ const MainPage = () => {
         <div>
             <BugButton />
             {t('Main')}
-            <Input
+            {/* <Input
                 onChange={onChange}
                 value={value}
                 placeholder="Введите текст"
-            />
+            /> */}
             <Counter />
         </div>
     );
