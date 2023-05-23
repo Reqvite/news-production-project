@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginActions } from 'features/AuthByUsername/model/slice/loginSlice';
 import { memo, useCallback } from 'react';
-import { getLoginState } from 'features/AuthByUsername/model/selectors/getLoginState';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername';
+import { getLoginState } from 'features/AuthByUsername/model/selectors/getLoginState/getLoginState';
+import { loginActions } from 'features/AuthByUsername/model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 
 interface LoginFromProps {
   className?: string;
