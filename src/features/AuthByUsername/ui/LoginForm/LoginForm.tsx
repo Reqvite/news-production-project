@@ -2,20 +2,66 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginActions } from 'features/AuthByUsername/model/slice/loginSlice';
+import { memo, useCallback } from 'react';
+import { getLoginState } from 'features/AuthByUsername/model/selectors/getLoginState';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import cls from './LoginForm.module.scss';
+import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 
 interface LoginFromProps {
   className?: string;
 }
 
-export const LoginForm = (props: LoginFromProps) => {
+export const LoginForm = memo((props: LoginFromProps) => {
     const { className } = props;
+
+    const dispatch = useDispatch();
+    const {
+        username, password, error, isLoading,
+    } = useSelector(getLoginState);
+
+    const onChangeUsername = useCallback((value: string) => {
+        dispatch(loginActions.setUsername(value));
+    }, [dispatch]);
+
+    const onChangePassword = useCallback((value: string) => {
+        dispatch(loginActions.setPassword(value));
+    }, [dispatch]);
+
+    const onLoginClick = useCallback(() => {
+        dispatch(loginByUsername({ username, password }));
+    }, [dispatch, password, username]);
+
     const { t } = useTranslation();
     return (
         <div className={classNames(cls.LoginFrom, {}, [className])}>
-            <Input type="text" className={cls.input} placeholder={t('Username')} autofocus />
-            <Input type="text" className={cls.input} placeholder={t('Password')} />
-            <Button className={cls.loginBtn}>{t('Login')}</Button>
+            <Text title={t('Authorization form')} />
+            {error && <Text theme={TextTheme.ERROR} text={error} />}
+            <Input
+                type="text"
+                onChange={onChangeUsername}
+                value={username}
+                className={cls.input}
+                placeholder={t('Username')}
+                autofocus
+            />
+            <Input
+                type="text"
+                onChange={onChangePassword}
+                value={password}
+                className={cls.input}
+                placeholder={t('Password')}
+            />
+            <Button
+                onClick={onLoginClick}
+                className={cls.loginBtn}
+                disabled={isLoading}
+            >
+                {t('Login')}
+
+            </Button>
         </div>
     );
-};
+});

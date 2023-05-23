@@ -14,8 +14,8 @@ const preview: Preview = {
         themes: {
             default: 'light',
             list: [
-                { name: 'light', class: 'light', color: '#ffffff' },
-                { name: 'dark', class: 'dark', color: '#000000' },
+                { name: 'light', class: 'app_light_theme', color: '#ffffff' },
+                { name: 'dark', class: 'app_dark_theme', color: '#000000' },
             ],
         },
     },

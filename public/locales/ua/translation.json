@@ -8,5 +8,8 @@
   "ShortLanguage": "Eng",
   "Login": "Увійти",
   "Username": "Ім'я",
-  "Password": "Пароль"
+  "Password": "Пароль",
+  "Authorization form": "Форма авторизації",
+  "Username or password incorrect": "Неправильний логін або пароль",
+  "Logout": "Вийти"
 }

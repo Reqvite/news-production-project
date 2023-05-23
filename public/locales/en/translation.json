@@ -8,5 +8,8 @@
   "ShortLanguage": "Ua",
   "Login": "Login",
   "Username": "Username",
-  "Password": "Password"
+  "Password": "Password",
+  "Authorization form": "Authorization form",
+  "Username or password incorrect": "Username or password incorrect",
+  "Logout": "Logout"
 }

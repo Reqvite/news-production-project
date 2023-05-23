@@ -110,3 +110,12 @@ export const ButtonXl : Story = {
         size: ButtonSize.XL,
     },
 };
+
+export const Disabled : Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINED,
+        size: ButtonSize.XL,
+        disabled: true,
+    },
+};
