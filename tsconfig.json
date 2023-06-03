@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "ES2022",
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
@@ -18,12 +18,11 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS",
-    }
-  },
-  "include": [
-    "./config/jest/setupTests.ts",
-    "./src/**/*.ts",
-    "./src/**/*.tsx"
-  ],
+      "module": "CommonJS"
+    },
+    "types": [
+      "jest",
+      "@testing-library/jest-dom"
+    ],
+  }
 }
