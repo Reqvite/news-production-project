@@ -42,7 +42,7 @@ module.exports = {
             ignoreAttribute: ['data-testid', 'to'],
         }],
         'max-len': ['error', {
-            code: 120,
+            code: 140,
             ignoreComments: true,
         }],
         'jsx-a11y/click-events-have-key-events': 'off',
@@ -51,6 +51,7 @@ module.exports = {
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [{
         files: ['**/src/**/*.{test, stories}.{ts,tsx}'],
