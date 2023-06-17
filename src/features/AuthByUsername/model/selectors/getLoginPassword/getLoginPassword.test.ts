@@ -4,7 +4,7 @@ import { getLoginPassword } from './getLoginPassword';
 
 describe('get error', () => {
     test('should retrun error', () => {
-        const state: DeepPartial<StateSchema> = {
+        const state: any = {
             loginForm: { password: '' },
         };
         expect(getLoginPassword(state as StateSchema)).toEqual('');

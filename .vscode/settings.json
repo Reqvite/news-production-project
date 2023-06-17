@@ -5,7 +5,10 @@
     "../../../../../../../Work/Cod/GOIT/Github_projects/1/news-production-project/src/shared/config/i18n",
     "../../../../../../../Work/Cod/GOIT/Github_projects/1/news-production-project/public/locales",
     "../../../../../../../Work/Cod/GOIT/Github_projects/1/news-production-project/public/locales/en",
-    "../../../../../../../Work/Cod/GOIT/Github_projects/1/news-production-project/public/locales/ua"
+    "../../../../../../../Work/Cod/GOIT/Github_projects/1/news-production-project/public/locales/ua",
+    "D:/Work/Cod/GOIT/Github_projects/1/news-production-project/public/locales",
+    "D:/Work/Cod/GOIT/Github_projects/1/news-production-project/public/locales/en",
+    "D:/Work/Cod/GOIT/Github_projects/1/news-production-project/public"
   ],
   "i18n-ally.keystyle": "nested",
 }

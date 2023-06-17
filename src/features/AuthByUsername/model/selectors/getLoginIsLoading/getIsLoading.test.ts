@@ -4,7 +4,7 @@ import { getLoginIsLoading } from './getLoginIsLoading';
 
 describe('get error', () => {
     test('should retrun error', () => {
-        const state: DeepPartial<StateSchema> = {
+        const state: any = {
             loginForm: { isLoading: false },
         };
         expect(getLoginIsLoading(state as StateSchema)).toEqual(false);

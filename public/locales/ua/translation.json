@@ -11,5 +11,9 @@
   "Password": "Пароль",
   "Authorization form": "Форма авторизації",
   "Username or password incorrect": "Неправильний логін або пароль",
-  "Logout": "Вийти"
+  "Logout": "Вийти",
+  "Profile": "Профіль",
+  "Edit": "Редагувати",
+  "Name": "Ваше ім'я",
+  "Surname": "Ваша фамілія"
 }

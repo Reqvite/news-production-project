@@ -4,7 +4,7 @@ import { getLoginError } from './getLoginError';
 
 describe('get error', () => {
     test('should retrun error', () => {
-        const state: DeepPartial<StateSchema> = {
+        const state: any = {
             loginForm: { error: 'error' },
         };
         expect(getLoginError(state as StateSchema)).toEqual('error');
