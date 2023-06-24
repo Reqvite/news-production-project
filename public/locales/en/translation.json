@@ -15,5 +15,14 @@
   "Profile": "Profile",
   "Edit": "Edit",
   "Name": "Your name",
-  "Surname": "Your surname"
+  "Surname": "Your surname",
+  "An error occurred while loading the profile": "An error occurred while loading the profile",
+  "Try reloading the page": "Try reloading the page",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Enter avatar link": "Enter avatar link",
+  "Enter username": "Enter username",
+  "City": "Your city",
+  "Your Age": "Your Age",
+  "Select currency": "Select currency"
 }

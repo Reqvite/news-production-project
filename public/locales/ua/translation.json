@@ -15,5 +15,14 @@
   "Profile": "Профіль",
   "Edit": "Редагувати",
   "Name": "Ваше ім'я",
-  "Surname": "Ваша фамілія"
+  "Surname": "Ваша фамілія",
+  "An error occurred while loading the profile": "Виникла помилка при завантаженні профілю",
+  "Try reloading the page": "Спробуйте перезавантажити сторінку",
+  "Cancel": "Скасувати",
+  "Save": "Зберегти",
+  "Enter avatar link": "Введіть посилання на аватар",
+  "Enter username": "Ваш нікнейм",
+  "City": "Ваше місто",
+  "Your Age": "Ваш вік",
+  "Select currency": "Виберіть валюту"
 }
