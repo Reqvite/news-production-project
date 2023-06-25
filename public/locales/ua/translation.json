@@ -24,5 +24,10 @@
   "Enter username": "Ваш нікнейм",
   "City": "Ваше місто",
   "Your Age": "Ваш вік",
-  "Select currency": "Виберіть валюту"
+  "Select currency": "Виберіть валюту",
+  "Save data error": "Помилка збереження даних",
+  "Incorrect region": "Некоректний регіон",
+  "Data not specified": "Дані не вказані",
+  "Name and surname are mandatory": "Ім'я та прізвище обов'язкові",
+  "Incorrect age": "Неправильний вік"
 }

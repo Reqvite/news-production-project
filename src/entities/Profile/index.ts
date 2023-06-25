@@ -28,3 +28,7 @@ export {
 export {
     getProfileForm,
 } from './model/selectors/getProfileForm/getProfileForm';
+export { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+export { ValidateProfileError } from './model/types/profile';
+
+export { updateProfileData } from './model/services/updateProfileData/updateProfileData';

@@ -24,5 +24,10 @@
   "Enter username": "Enter username",
   "City": "Your city",
   "Your Age": "Your Age",
-  "Select currency": "Select currency"
+  "Select currency": "Select currency",
+  "Save data error": "Save data error",
+  "Incorrect region": "Incorrect region",
+  "Data not specified": "Data not specified",
+  "Name and surname are mandatory": "Name and surname are required",
+  "Incorrect age": "Incorrect age"
 }
