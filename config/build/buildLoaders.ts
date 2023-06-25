@@ -1,8 +1,10 @@
 import { RuleSetRule } from 'webpack';
 import { BuildOptions } from './types/config';
 import buildCssLoader from './loaders/buildCssLoader';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 
-export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): RuleSetRule[] {
+    const { isDev } = options;
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -19,11 +21,13 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 
     const cssLoader = buildCssLoader(isDev);
 
+    const babelLoader = buildBabelLoader(options);
+
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
     };
 
-    return [typescriptLoader, cssLoader, svgLoader, fileLoader];
+    return [babelLoader, typescriptLoader, cssLoader, svgLoader, fileLoader];
 }
