@@ -54,6 +54,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             />
         );
     } else {
+        // eslint-disable-next-line i18next/no-literal-string
         <div className={classNames(cls.ArticleDetails, {}, [classname])}>
             dsdsdsdsd
         </div>;
