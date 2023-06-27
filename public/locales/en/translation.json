@@ -29,5 +29,6 @@
   "Incorrect region": "Incorrect region",
   "Data not specified": "Data not specified",
   "Name and surname are mandatory": "Name and surname are required",
-  "Incorrect age": "Incorrect age"
+  "Incorrect age": "Incorrect age",
+  "Articles": "Articles"
 }

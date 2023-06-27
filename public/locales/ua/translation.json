@@ -29,5 +29,6 @@
   "Incorrect region": "Некоректний регіон",
   "Data not specified": "Дані не вказані",
   "Name and surname are mandatory": "Ім'я та прізвище обов'язкові",
-  "Incorrect age": "Неправильний вік"
+  "Incorrect age": "Неправильний вік",
+  "Articles": "Статті"
 }

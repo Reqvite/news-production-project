@@ -13,7 +13,7 @@ import {
     profileActions,
     profileReducer,
 } from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Country, Currency } from 'shared/const/common';
@@ -111,4 +111,4 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     );
 };
 
-export default ProfilePage;
+export default memo(ProfilePage);
