@@ -30,5 +30,7 @@
   "Data not specified": "Дані не вказані",
   "Name and surname are mandatory": "Ім'я та прізвище обов'язкові",
   "Incorrect age": "Неправильний вік",
-  "Articles": "Статті"
+  "Articles": "Статті",
+  "Article not found": "Статтю не знайдено",
+  "An error occurred while loading the article": "Сталася помилка під час завантаження статті."
 }

@@ -30,5 +30,7 @@
   "Data not specified": "Data not specified",
   "Name and surname are mandatory": "Name and surname are required",
   "Incorrect age": "Incorrect age",
-  "Articles": "Articles"
+  "Articles": "Articles",
+  "Article not found": "Article not found",
+  "An error occurred while loading the article": "An error occurred while loading the article."
 }

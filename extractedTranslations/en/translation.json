@@ -1,6 +1,10 @@
 {
   "About": "",
+  "An error occurred while loading the article": {
+    "": ""
+  },
   "An error occurred while loading the profile": "",
+  "Article not found": "Article not found",
   "Articles": "Articles",
   "Authorization form": "",
   "Cancel": "",
@@ -34,6 +38,10 @@
   "Username or password incorrect": "",
   "Your Age": "",
   "Про сторінку": "Про сторінку",
+  "Произошла ошибка при загрузке статьи": {
+    "": ""
+  },
+  "Статья не найдена": "Статья не найдена",
   "Укажите валюту": "",
   "Укажите страну": ""
 }

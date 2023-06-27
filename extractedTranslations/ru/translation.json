@@ -1,5 +1,9 @@
 {
+  "An error occurred while loading the article": {
+    "": ""
+  },
   "An error occurred while loading the profile": "An error occurred while loading the profile",
+  "Article not found": "Article not found",
   "Articles": "Articles",
   "Authorization form": "Authorization form",
   "Cancel": "Cancel",
@@ -30,5 +34,9 @@
   "Username": "Username",
   "Your Age": "Your Age",
   "Про сторінку": "Про сторінку",
+  "Произошла ошибка при загрузке статьи": {
+    "": ""
+  },
+  "Статья не найдена": "Статья не найдена",
   "Укажите страну": "Укажите страну"
 }

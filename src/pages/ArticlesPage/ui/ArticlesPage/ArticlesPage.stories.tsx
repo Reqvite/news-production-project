@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
-import ArticlePage from './ArticlePage';
+import ArticlesPage from './ArticlesPage';
 
-const meta: Meta<typeof ArticlePage> = {
+const meta: Meta<typeof ArticlesPage> = {
     decorators: [withRouter],
-    title: 'pages/ArticlePage',
-    component: ArticlePage,
+    title: 'pages/ArticlesPage',
+    component: ArticlesPage,
 };
 
 export default meta;
