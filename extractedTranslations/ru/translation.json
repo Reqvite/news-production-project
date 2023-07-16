@@ -1,4 +1,5 @@
 {
+  "Add comment text": "Add comment text",
   "An error occurred while loading the article": {
     "": ""
   },
@@ -30,15 +31,19 @@
   "Save": "Save",
   "Save data error": "Save data error",
   "Select currency": "Select currency",
+  "Send": "Send",
   "ShortLanguage": "ShortLanguage",
   "Surname": "Surname",
   "Try reloading the page": "Try reloading the page",
   "Username": "Username",
   "Your Age": "Your Age",
+  "Отменить": "Отменить",
   "Про сторінку": "Про сторінку",
   "Произошла ошибка при загрузке статьи": {
     "": ""
   },
+  "Редактировать": "Редактировать",
+  "Сохранить": "Сохранить",
   "Статья не найдена": "Статья не найдена",
   "Укажите страну": "Укажите страну"
 }

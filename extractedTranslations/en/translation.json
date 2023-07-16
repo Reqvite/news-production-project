@@ -1,5 +1,6 @@
 {
   "About": "",
+  "Add comment text": "Add comment text",
   "An error occurred while loading the article": {
     "": ""
   },
@@ -32,6 +33,7 @@
   "Save": "",
   "Save data error": "",
   "Select currency": "",
+  "Send": "Send",
   "ShortLanguage": "",
   "Surname": "",
   "Try reloading the page": "",
@@ -39,10 +41,13 @@
   "Username or password": "",
   "Username or password incorrect": "",
   "Your Age": "",
+  "Отменить": "Отменить",
   "Про сторінку": "Про сторінку",
   "Произошла ошибка при загрузке статьи": {
     "": ""
   },
+  "Редактировать": "Редактировать",
+  "Сохранить": "Сохранить",
   "Статья не найдена": "Статья не найдена",
   "Укажите валюту": "",
   "Укажите страну": ""
