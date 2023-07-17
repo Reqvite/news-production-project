@@ -12,6 +12,7 @@ const meta: Meta<typeof ArticleDetails> = {
 export default meta;
 type Story = StoryObj<typeof ArticleDetails>;
 
+// @ts-ignore
 const article: Article = {
     id: '1',
     title: 'Javascript news',

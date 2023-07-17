@@ -7,6 +7,7 @@
   "Article not found": "Article not found",
   "Articles": "Articles",
   "Authorization form": "Authorization form",
+  "Back": "Back",
   "Cancel": "Cancel",
   "City": "City",
   "Comments": "Comments",
@@ -27,6 +28,7 @@
   "Not Found": "Not Found",
   "Password": "Password",
   "Profile": "Profile",
+  "Read more": "Read more",
   "Reload page": "Reload page",
   "Save": "Save",
   "Save data error": "Save data error",
@@ -37,6 +39,7 @@
   "Try reloading the page": "Try reloading the page",
   "Username": "Username",
   "Your Age": "Your Age",
+  "Назад к списку": "Назад к списку",
   "Отменить": "Отменить",
   "Про сторінку": "Про сторінку",
   "Произошла ошибка при загрузке статьи": {
@@ -45,5 +48,12 @@
   "Редактировать": "Редактировать",
   "Сохранить": "Сохранить",
   "Статья не найдена": "Статья не найдена",
-  "Укажите страну": "Укажите страну"
+  "Укажите страну": "Укажите страну",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
