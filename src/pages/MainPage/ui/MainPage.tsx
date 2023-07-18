@@ -2,6 +2,7 @@ import { BugButton } from 'app/providers/ErrorBoundary/ui/BugButton';
 import { Counter } from 'entities/Counter';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Page } from 'shared/ui/Page/Page';
 
 const MainPage = () => {
     const { t } = useTranslation();
@@ -12,11 +13,11 @@ const MainPage = () => {
     };
 
     return (
-        <div>
+        <Page>
             <BugButton />
             {t('Main')}
             <Counter />
-        </div>
+        </Page>
     );
 };
 
