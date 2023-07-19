@@ -38,5 +38,17 @@
   "Add comment text": "Add comment text",
   "Send": "Send",
   "Read more": "Read more...",
-  "Back": "Back"
+  "Back": "Back",
+  "Search": "Search",
+  "Sort by": "Sort by",
+  "by": "by",
+  "increase": "asc",
+  "desc": "desc",
+  "creation date": "creation date",
+  "title": "title",
+  "views": "Views",
+  "All": "All",
+  "It": "It",
+  "Economics": "Economics",
+  "Science": "Science"
 }
