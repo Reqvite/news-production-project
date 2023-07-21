@@ -1,5 +1,7 @@
 {
+  "Add article": "Add article",
   "Add comment text": "Add comment text",
+  "Add new article": "Add new article",
   "All": "All",
   "An error occurred while loading the article": {
     "": ""
@@ -13,9 +15,11 @@
   "Cancel": "Cancel",
   "City": "City",
   "Comments": "Comments",
+  "Create article": "Create article",
   "Data not specified": "Data not specified",
   "Economics": "Economics",
   "Edit": "Edit",
+  "Edit data with": "Edit data with",
   "Enter avatar link": "Enter avatar link",
   "Enter username": "Enter username",
   "Error boundary message": "Error boundary message",
@@ -28,6 +32,7 @@
   "Main": "Main",
   "Name": "Name",
   "Name and surname are mandatory": "Name and surname are mandatory",
+  "News": "News",
   "No comments": "No comments",
   "Not Found": "Not Found",
   "Password": "Password",
@@ -45,6 +50,7 @@
   "Sort by": "Sort by",
   "Surname": "Surname",
   "Try reloading the page": "Try reloading the page",
+  "Ulbi TV App": "Ulbi TV App",
   "Username": "Username",
   "Your Age": "Your Age",
   "by": "by",
@@ -63,6 +69,7 @@
   },
   "Редактировать": "Редактировать",
   "Рекомендуем": "Рекомендуем",
+  "Создать статью": "Создать статью",
   "Сохранить": "Сохранить",
   "Статьи не найдены": "Статьи не найдены",
   "Статья не найдена": "Статья не найдена",

@@ -8,3 +8,4 @@ export { articleDetailsActions, articleDetailsReducer } from './model/slice/arti
 
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
+export { getArticleDetailsData } from './model/selectors/articleDetails';
