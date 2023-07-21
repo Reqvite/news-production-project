@@ -9,6 +9,7 @@
   "Articles": "Articles",
   "Authorization form": "Authorization form",
   "Back": "Back",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "City": "City",
   "Comments": "Comments",
@@ -32,6 +33,7 @@
   "Password": "Password",
   "Profile": "Profile",
   "Read more": "Read more",
+  "Recomendation": "Recomendation",
   "Reload page": "Reload page",
   "Save": "Save",
   "Save data error": "Save data error",
@@ -51,6 +53,7 @@
   "increase": "increase",
   "title": "title",
   "views": "views",
+  "Комментарии": "Комментарии",
   "Назад к списку": "Назад к списку",
   "Отменить": "Отменить",
   "Поиск": "Поиск",
@@ -59,7 +62,9 @@
     "": ""
   },
   "Редактировать": "Редактировать",
+  "Рекомендуем": "Рекомендуем",
   "Сохранить": "Сохранить",
+  "Статьи не найдены": "Статьи не найдены",
   "Статья не найдена": "Статья не найдена",
   "Укажите страну": "Укажите страну",
   "Читать далее": {
