@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { Article } from '../../model/types/article';
+import { ArticleBlockType, ArticleType, Article } from '../../model/types/article';
+
 import { ArticleDetails } from './ArticleDetails';
 
 // FIX

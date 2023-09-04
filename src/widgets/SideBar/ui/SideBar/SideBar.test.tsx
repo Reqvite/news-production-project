@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { componentRender } from 'shared/config/tests/componentRender/componentRender';
 
-import { SideBar } from 'widgets/SideBar/';
+import { SideBar } from './SideBar';
 
 describe('Sidebar', () => {
     test('test sidebar toggle', () => {
