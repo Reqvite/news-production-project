@@ -1,20 +1,28 @@
 .title {
   color: var(--primary-color);
-  font: var(--font-l);
 }
 
 .text {
   color: var(--secondary-color);
-  font: var(--font-m);
 }
 
 .error {
   .title {
-    color: var(--red-light);
+      color: var(--red-light);
   }
 
   .text {
-    color: var(--red-dark);
+      color: var(--red-dark);
+  }
+}
+
+.inverted {
+  .title {
+      color: var(--inverted-primary-color);
+  }
+
+  .text {
+      color: var(--inverted-secondary-color);
   }
 }
 
@@ -30,22 +38,32 @@
   text-align: center;
 }
 
-.size_m {
+.size_s {
   .title {
-    font: var(--font-l);
+      font: var(--font-m);
   }
 
   .text {
-    font: var(--font-m);
+      font: var(--font-s);
+  }
+}
+
+.size_m {
+  .title {
+      font: var(--font-l);
+  }
+
+  .text {
+      font: var(--font-m);
   }
 }
 
 .size_l {
   .title {
-    font: var(--font-xl);
+      font: var(--font-xl);
   }
 
   .text {
-    font: var(--font-l);
+      font: var(--font-l);
   }
 }
